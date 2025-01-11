@@ -1,0 +1,14 @@
+# Config file for air
+[build]
+  cmd = "go build -o ./tmp/main.exe ./cmd"
+  bin = "./tmp/main.exe"
+  full_bin = "./tmp/main.exe"
+  include_ext = ["go", "tpl", "tmpl", "html"]
+  exclude_dir = ["vendor"]
+  exclude_file = [".air.toml"]
+  follow_symlink = true
+  dir = "."
+  log = "air_errors.log"
+
+[log]
+  level = "debug"
