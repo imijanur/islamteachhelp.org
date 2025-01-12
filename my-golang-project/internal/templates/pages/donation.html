@@ -1,75 +1,100 @@
 {{ define "content" }}
 <header class="page-header alignwide">
-  <h1 class="page-title">Author: <span>donation</span>
-  </h1>
+  <h1 class="page-title"><span>Author:</span> <span>donation</span></h1>
 </header>
 
+<style>
+  /* Responsive Typography */
+  header h1 span {
+    font-size: 4vw;
+    max-font-size: 60px;
+  }
 
-<article id="post-222"
-  class="post-222 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized entry">
+  /* Entry Title Styling */
+  header h2 a {
+    font-size: 1.4rem;
+    color: red;
+    text-decoration: none;
+  }
 
+  /* Responsive Image Styling */
+  .post-thumbnail-inner img {
+    width: 100%;
+    height: auto;
+    max-width: 1280px;
+  }
 
+  /* Responsive Layout */
+  @media (max-width: 768px) {
+    header h1 span {
+      font-size: 5vw;
+    }
+
+    header h2 a {
+      font-size: 1.5rem;
+    }
+
+    .entry-content p {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    header h1 span {
+      font-size: 6vw;
+    }
+
+    header h2 a {
+      font-size: 1.25rem;
+    }
+
+    .entry-content p {
+      font-size: 0.9rem;
+    }
+  }
+</style>
+
+<article id="post-222" class="responsive-article">
   <header class="entry-header">
-    <h2 class="entry-title default-max-width"><a href="/south-24-parganas-district/">South 24 Parganas
-        district</a></h2>
-
+    <h2 class="entry-title default-max-width">
+      <a href="/south-24-parganas-district/">South 24 Parganas district</a>
+    </h2>
     <figure class="post-thumbnail">
-      <a class="post-thumbnail-inner alignwide" href="/south-24-parganas-district/" aria-hidden="true"
-        tabindex="-1">
-        <img width="1280" height="834" src="/static/content/uploads/2023/11/photo_6188359506698812051_y.jpg"
-          class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async"
-          fetchpriority="high" style="width:100%;height:65.16%;max-width:1280px;"> </a>
+      <a class="post-thumbnail-inner alignwide" href="/south-24-parganas-district/">
+        <img width="1280" height="834" src="/static/content/uploads/2023/11/photo_6188359506698812051_y.jpg" alt="">
+      </a>
     </figure>
-
   </header>
-
   <div class="entry-content">
-    <p>located in the South 24 Parganas district, and they are engaged in various activities.South 24 Parganas
-      districtSouth 24 Parganas districtSouth 24 Parganas districtSouth 24 Parganas districtSouth 24 Parganas
-      districtSouth 24 Parganas districtSouth 24 Parganas districtSouth 24 Parganas district</p>
+    <p>Located in the South 24 Parganas district, engaged in various activities...</p>
   </div>
-
-
   <footer class="entry-footer default-max-width">
-    <span class="posted-on">Published <time class="entry-date published updated"
-        datetime="2023-11-03T18:35:08+00:00">November 3, 2023</time></span>
-    <div class="post-taxonomies"><span class="cat-links">Categorized as <a
-          href="/category/" rel="category tag">Uncategorized</a> </span></div>
+    <span class="posted-on">Published <time class="entry-date published updated" datetime="2023-11-03T18:35:08+00:00">November 3, 2023</time></span>
+    <div class="post-taxonomies">
+      <span class="cat-links">Categorized as <a href="/category/" rel="category tag">Uncategorized</a></span>
+    </div>
   </footer>
 </article>
 
-<article id="post-220"
-  class="post-220 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized entry">
-
-
+<article id="post-220" class="responsive-article">
   <header class="entry-header">
-    <h2 class="entry-title default-max-width"><a
-        href="/bmku-is-a-madrasha-islamic-educational-institution/">BMKU is a Madrasha (Islamic
-        educational institution)</a></h2>
-
+    <h2 class="entry-title default-max-width">
+      <a href="/bmku-is-a-madrasha-islamic-educational-institution/">BMKU is a Madrasha (Islamic educational institution)</a>
+    </h2>
     <figure class="post-thumbnail">
-      <a class="post-thumbnail-inner alignwide"
-        href="/bmku-is-a-madrasha-islamic-educational-institution/" aria-hidden="true" tabindex="-1">
-        <img width="1280" height="853" src="/static/content/uploads/2023/11/51caa7df-067d-4812-baeb-6de7d82e850a.jpeg"
-          class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async"
-          style="width:100%;height:66.64%;max-width:1280px;"> </a>
+      <a class="post-thumbnail-inner alignwide" href="/bmku-is-a-madrasha-islamic-educational-institution/">
+        <img width="1280" height="853" src="/static/content/uploads/2023/11/51caa7df-067d-4812-baeb-6de7d82e850a.jpeg" alt="">
+      </a>
     </figure>
-
   </header>
-
   <div class="entry-content">
-    <p>located in the South 24 Parganas district, and they are engaged in various activities.located in the South 24
-      Parganas district, and they are engaged in various activities.located in the South 24 Parganas district, and they
-      are engaged in various activities.located in the South 24 Parganas district, and they are engaged in various
-      activities.</p>
+    <p>Located in the South 24 Parganas district, engaged in various activities...</p>
   </div>
-
-
   <footer class="entry-footer default-max-width">
-    <span class="posted-on">Published <time class="entry-date published updated"
-        datetime="2023-11-03T18:34:20+00:00">November 3, 2023</time></span>
-    <div class="post-taxonomies"><span class="cat-links">Categorized as <a
-          href="/category/uncategorized/index.html" rel="category tag">Uncategorized</a> </span></div>
+    <span class="posted-on">Published <time class="entry-date published updated" datetime="2023-11-03T18:34:20+00:00">November 3, 2023</time></span>
+    <div class="post-taxonomies">
+      <span class="cat-links">Categorized as <a href="/category/uncategorized/index.html" rel="category tag">Uncategorized</a></span>
+    </div>
   </footer>
 </article>
 {{ end }}
