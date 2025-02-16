@@ -1,8 +1,8 @@
 package handlers
 
 import (
-	"fmt"
 	"html/template"
+	"log"
 
 	"github.com/gofiber/fiber/v3"
 	"github.com/imijanur/islamteachhelps.com/internal/models"
@@ -20,7 +20,7 @@ func renderTemplate(c fiber.Ctx, pageName string, page models.Page) error {
 	)
 	if err != nil {
 		// Handle the error
-		fmt.Println(err)
+		log.Println(err)
 		return err
 	}
 
@@ -28,7 +28,7 @@ func renderTemplate(c fiber.Ctx, pageName string, page models.Page) error {
 	tmpl, err = tmpl.ParseFiles("internal/templates/pages/" + pageName + ".html")
 	if err != nil {
 		// Handle the error
-		fmt.Println(err)
+		log.Println(err)
 		return err
 	}
 
