@@ -33,8 +33,7 @@
               >
                 <div class="elementor-widget-container">
                   <p>
-                    Behind the word mountains, far from the countries Vokalia
-                    and Consonantia, there
+                    {{ .About }}
                   </p>
                 </div>
               </div>
@@ -157,14 +156,14 @@
                               <div class="elementor-icon-list-item">
                                 <a
                                   class="elementor-repeater-item-01d06f0 ekit_badge_left"
-                                  href="/sample-page"
+                                  href="/"
                                   target="_blank"
                                   rel="nofollow"
                                 >
                                   <div class="ekit_page_list_content">
                                     <span class="elementor-icon-list-text">
                                       <span class="ekit_page_list_title_title"
-                                        >Home (Temp)</span
+                                        >Home </span
                                       >
                                     </span>
                                   </div>
@@ -173,14 +172,14 @@
                               <div class="elementor-icon-list-item">
                                 <a
                                   class="elementor-repeater-item-324f54e ekit_badge_left"
-                                  href="/sample-page"
+                                  href="/contact"
                                   target="_blank"
                                   rel="nofollow"
                                 >
                                   <div class="ekit_page_list_content">
                                     <span class="elementor-icon-list-text">
                                       <span class="ekit_page_list_title_title"
-                                        >Contact From 7 Widget</span
+                                        >Contact</span
                                       >
                                     </span>
                                   </div>
@@ -189,14 +188,14 @@
                               <div class="elementor-icon-list-item">
                                 <a
                                   class="elementor-repeater-item-5245ae1 ekit_badge_left"
-                                  href="/sample-page"
+                                  href="/about"
                                   target="_blank"
                                   rel="nofollow"
                                 >
                                   <div class="ekit_page_list_content">
                                     <span class="elementor-icon-list-text">
                                       <span class="ekit_page_list_title_title"
-                                        >Video Widget For Elementor</span
+                                        >About</span
                                       >
                                     </span>
                                   </div>
@@ -248,32 +247,40 @@
                     rel="stylesheet"
                     href="/static/content/plugins/elementor/assets/css/widget-icon-list.min.css"
                   />
-                  <ul class="elementor-icon-list-items">
-                    <li class="elementor-icon-list-item">
-                      <span class="elementor-icon-list-icon">
-                        <i aria-hidden="true" class="fas fa-phone-alt"></i>
-                      </span>
-                      <span class="elementor-icon-list-text">8888888888</span>
+                  <ul class="elementor-icon-list-items" style="list-style: none; padding: 0;">
+                    <li class="elementor-icon-list-item" style="margin-bottom: 10px;">
+                        <span class="elementor-icon-list-icon">
+                            <i aria-hidden="true" class="fas fa-phone-alt"></i>
+                        </span>
+                        <span class="elementor-icon-list-text">
+                            <a href="tel:{{.Mobile}}" style="color: white;">{{.Mobile}}</a>
+                        </span>
                     </li>
-                    <li class="elementor-icon-list-item">
-                      <span class="elementor-icon-list-icon">
-                        <i aria-hidden="true" class="fas fa-envelope"></i>
-                      </span>
-                      <span class="elementor-icon-list-text"
-                        >xyzz@gmail.com</span
-                      >
+                    <li class="elementor-icon-list-item" style="margin-bottom: 10px;">
+                        <span class="elementor-icon-list-icon">
+                            <i aria-hidden="true" class="fas fa-envelope"></i>
+                        </span>
+                        <span class="elementor-icon-list-text">
+                            <a href="mailto:{{.PrimaryEmail}}" style="color: white;">{{.PrimaryEmail}}</a>
+                        </span>
                     </li>
-                    <li class="elementor-icon-list-item">
-                      <span class="elementor-icon-list-icon">
-                        <i aria-hidden="true" class="fas fa-map-marker-alt"></i>
-                      </span>
-                      <span class="elementor-icon-list-text"
-                        >Sec. Moulana Md.Ilias Gazi ESTD.-1972 Reg. No.
-                        S/1L/18259, DIT (E) 1786 8E/25/06-07 International
-                        F.C.R.A. No.- 147110808</span
-                      >
+                    <li class="elementor-icon-list-item" style="margin-bottom: 10px;">
+                        <span class="elementor-icon-list-icon">
+                            <i aria-hidden="true" class="fas fa-envelope"></i>
+                        </span>
+                        <span class="elementor-icon-list-text">
+                            <a href="mailto:{{.SecondaryEmail}}" style="color: white;">{{.SecondaryEmail}}</a>
+                        </span>
                     </li>
-                  </ul>
+                    <li class="elementor-icon-list-item" style="margin-bottom: 10px;">
+                        <span class="elementor-icon-list-icon">
+                            <i aria-hidden="true" class="fas fa-map-marker-alt"></i>
+                        </span>
+                        <span class="elementor-icon-list-text" style="display: block; text-align: left;">
+                            <a href="https://www.google.com/maps/search/?api=1&query={{.Address}}" target="_blank" style="color: white;">{{.Address}}</a>
+                        </span>
+                    </li>
+                </ul>
                 </div>
               </div>
             </div>
@@ -305,7 +312,7 @@
                       class="ekit-heading elementskit-section-title-wraper text_center ekit_heading_tablet- ekit_heading_mobile-text_center"
                     >
                       <p class="ekit-heading--title elementskit-section-title">
-                        © 2023 All Rights Reserved.
+                        © {{.CopyRightStartYear}} - {{.GetYear}} All Rights Reserved.
                       </p>
                     </div>
                   </div>
