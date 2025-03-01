@@ -1,18 +1,18 @@
 {{ define "content" }}
 <header class="page-header alignwide">
-  <h1 class="page-title"><span>Author:</span> <span>donation</span></h1>
+  <h1 class="page-title">Donate to Support Our Cause</h1>
 </header>
 
 <style>
   /* Responsive Typography */
-  header h1 span {
-    font-size: 4vw;
-    max-font-size: 60px;
+  header h1 {
+    font-size: 2.5vw;
+    max-font-size: 40px;
   }
 
   /* Entry Title Styling */
-  header h2 a {
-    font-size: 1.4rem;
+  header h2 {
+    font-size: 1.2rem;
     color: red;
     text-decoration: none;
   }
@@ -26,11 +26,11 @@
 
   /* Responsive Layout */
   @media (max-width: 768px) {
-    header h1 span {
-      font-size: 5vw;
+    header h1 {
+      font-size: 4vw;
     }
 
-    header h2 a {
+    header h2 {
       font-size: 1.5rem;
     }
 
@@ -40,11 +40,11 @@
   }
 
   @media (max-width: 480px) {
-    header h1 span {
-      font-size: 6vw;
+    header h1 {
+      font-size: 5vw;
     }
 
-    header h2 a {
+    header h2 {
       font-size: 1.25rem;
     }
 
@@ -52,49 +52,97 @@
       font-size: 0.9rem;
     }
   }
+
+  .donation-details {
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .donation-details img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 20px;
+  }
+
+  .donation-details-content {
+    flex: 1;
+  }
+
+  .qr-code {
+    text-align: center;
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .qr-code img {
+    max-width: 100%;
+    height: auto;
+    margin-left: 20px;
+  }
+
+  .qr-code-content {
+    flex: 1;
+  }
+
+  .payment-icons {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .payment-icons img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
 </style>
 
 <article id="post-222" class="responsive-article">
   <header class="entry-header">
-    <h2 class="entry-title default-max-width">
-      <a href="/south-24-parganas-district/">South 24 Parganas district</a>
-    </h2>
-    <figure class="post-thumbnail">
-      <a class="post-thumbnail-inner alignwide" href="/south-24-parganas-district/">
-        <img width="1280" height="834" src="/static/img/madrashah-birds-eye.jpg" alt="">
-      </a>
-    </figure>
+    <h2 class="entry-title default-max-width">Bank Account Details</h2>
   </header>
-  <div class="entry-content">
-    <p>Located in the South 24 Parganas district, engaged in various activities...</p>
-  </div>
-  <footer class="entry-footer default-max-width">
-    <span class="posted-on">Published <time class="entry-date published updated" datetime="2023-11-03T18:35:08+00:00">November 3, 2023</time></span>
-    <div class="post-taxonomies">
-      <span class="cat-links">Categorized as <a href="/category/" rel="category tag">Uncategorized</a></span>
+  <div class="entry-content donation-details">
+    <img src="/static/img/stand-guiding.jpg" alt="Bank Image">
+    <div class="donation-details-content">
+      <h3>Account 1</h3>
+      <p><strong>Bank Name:</strong> Bank Of India</p>
+      <p><strong>Account Number:</strong> 424110110001534</p>
+      <p><strong>IFSC Code:</strong> BKID0004241</p>
+      <p><strong>Account Holder Name:</strong> Moulana Md. Ilias Gazi</p>
+      <h3>Account 2</h3>
+      <p><strong>Bank Name:</strong> Bank Of India</p>
+      <p><strong>Account Number:</strong> 42411010014438</p>
+      <p><strong>IFSC Code:</strong> BKID0004241</p>
+      <p><strong>Account Holder Name:</strong> Moulana Md. Ilias Gazi</p>
+      <h3>Account 3</h3>
+      <p><strong>Bank Name:</strong> Axis Bank</p>
+      <p><strong>Account Number:</strong> 259010100052225</p>
+      <p><strong>IFSC Code:</strong> UTIB0000259</p>
+      <p><strong>Account Holder Name:</strong> ILIYACH GAZI</p>
     </div>
-  </footer>
+  </div>
 </article>
 
 <article id="post-220" class="responsive-article">
   <header class="entry-header">
-    <h2 class="entry-title default-max-width">
-      <a href="/bmku-is-a-madrasha-islamic-educational-institution/">BMKU is a Madrasha (Islamic educational institution)</a>
-    </h2>
-    <figure class="post-thumbnail">
-      <a class="post-thumbnail-inner alignwide" href="/bmku-is-a-madrasha-islamic-educational-institution/">
-        <img width="1280" height="853" src="/static/img/side-view.jpg" alt="">
-      </a>
-    </figure>
+    <h2 class="entry-title default-max-width">Donate via UPI</h2>
   </header>
-  <div class="entry-content">
-    <p>Located in the South 24 Parganas district, engaged in various activities...</p>
-  </div>
-  <footer class="entry-footer default-max-width">
-    <span class="posted-on">Published <time class="entry-date published updated" datetime="2023-11-03T18:34:20+00:00">November 3, 2023</time></span>
-    <div class="post-taxonomies">
-      <span class="cat-links">Categorized as <a href="/category/uncategorized/" rel="category tag">Uncategorized</a></span>
+  <div class="entry-content qr-code">
+    <div class="qr-code-content" style="display:flex">
+      <p><strong>UPI Mobile Number:</strong> +91 9330561238</p>
+      <div class="payment-icons">
+        <img src="/static/img/whatsapp-logo.png" alt="WhatsApp">
+        <img src="/static/img/phonepe-logo.png" alt="PhonePe">
+      </div>
     </div>
-  </footer>
+    <div>
+      <p>Scan the QR code below to donate via UPI:</p>
+      <img src="/static/img/qr-code.jpg" alt="UPI QR Code">
+    </div>
+  </div>
 </article>
 {{ end }}
