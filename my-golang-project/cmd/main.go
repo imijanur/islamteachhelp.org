@@ -22,26 +22,17 @@ func main() {
 	app.Use(recover.New())
 
 	// Routes
-	app.Get("/", handlers.HomeHandler)
-	app.Get("/test", handlers.TestHandler)
-	app.Get("/about", handlers.AboutHandler)
-	app.Get("/activities", handlers.ActivitiesHandler)
-	app.Get("/author", handlers.AuthorHandler)
-	app.Get("/category", handlers.CategoryHandler)
-	app.Get("/comments", handlers.CommentsHandler)
-	app.Get("/contact", handlers.ContactHandler)
-	app.Get("/donation", handlers.DonationHandler)
-	app.Get("/feed", handlers.FeedHandler)
-	app.Get("/gallery", handlers.GalleryHandler)
-	app.Get("/madrasha", handlers.MadrashaHandler)
-	app.Get("/balance-sheet", handlers.BalanceSheetHandler)
-	app.Get("/sample-page", handlers.SamplePageHandler)
-	app.Get("/south-24-parganas-district", handlers.South24ParganasDistrictHandler)
+	for _, r := range handlers.Routes {
+		route := r
+		app.Get(route.Path, func(c fiber.Ctx) error {
+			return handlers.RenderFiber(c, route.Template, route.Page)
+		})
+	}
 	app.Use("/static", static.New("./static"))
 
 	// 404 Handler
 	app.Use(func(c fiber.Ctx) error {
-		return handlers.NotFoundHandler(c)
+		return handlers.RenderFiber(c, handlers.NotFound.Template, handlers.NotFound.Page)
 	})
 
 	// Start server
