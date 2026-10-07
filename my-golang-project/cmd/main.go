@@ -29,6 +29,7 @@ func main() {
 		})
 	}
 	app.Use("/static", static.New("./static"))
+	app.Use("/", static.New("./public"))
 
 	// 404 Handler
 	app.Use(func(c fiber.Ctx) error {

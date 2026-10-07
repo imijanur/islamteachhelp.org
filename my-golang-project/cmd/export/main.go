@@ -22,11 +22,17 @@ func main() {
 func run() error {
 	distDir := "dist"
 
-	if err := os.RemoveAll(distDir); err != nil {
-		return fmt.Errorf("remove dist: %w", err)
-	}
 	if err := os.MkdirAll(distDir, 0o755); err != nil {
-		return fmt.Errorf("create dist: %w", err)
+		return fmt.Errorf("clean dist: %w", err)
+	}
+	entries, err := os.ReadDir(distDir)
+	if err != nil {
+		return fmt.Errorf("clean dist: %w", err)
+	}
+	for _, entry := range entries {
+		if err := os.RemoveAll(filepath.Join(distDir, entry.Name())); err != nil {
+			return fmt.Errorf("clean dist: %w", err)
+		}
 	}
 
 	pagesWritten := 0
@@ -50,6 +56,16 @@ func run() error {
 	filesCopied, err := copyDir("static", filepath.Join(distDir, "static"))
 	if err != nil {
 		return fmt.Errorf("copy static: %w", err)
+	}
+
+	if _, err := os.Stat("public"); err == nil {
+		n, err := copyDir("public", distDir)
+		if err != nil {
+			return fmt.Errorf("copy public: %w", err)
+		}
+		filesCopied += n
+	} else if !os.IsNotExist(err) {
+		return fmt.Errorf("stat public: %w", err)
 	}
 
 	headers := "/static/*\n  Cache-Control: public, max-age=2592000\n"
