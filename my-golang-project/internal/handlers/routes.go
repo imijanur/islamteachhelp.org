@@ -109,6 +109,7 @@ var Routes = []Route{
 	{"/balance-sheet", "balance-sheet", models.Page{Title: "Balance Sheet", Footer: footer}},
 	{"/sample-page", "sample-page", models.Page{Title: "Sample Page &#8211; Donation", Footer: footer}},
 	{"/south-24-parganas-district", "south-24-parganas-district", models.Page{Title: "South 24 Parganas District &#8211; Donation", Footer: footer}},
+	{"/bmku-is-a-madrasha-islamic-educational-institution", "bmku-is-a-madrasha-islamic-educational-institution", models.Page{Title: "BMKU is a Madrasha (Islamic educational institution) &#8211; Donation", Footer: footer}},
 }
 
 var NotFound = Route{"", "notfound", models.Page{Title: "Not Found", Footer: footer}}
